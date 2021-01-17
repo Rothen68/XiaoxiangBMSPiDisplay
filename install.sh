@@ -6,7 +6,7 @@ echo "Updating apt"
 sudo apt-get update && apt-get upgrade -y
 
 echo "Installing Python and libraries"
-sudo apt-get install python3 python3-pip libglib2.0-dev
+sudo apt-get install -y python3 python3-pip libglib2.0-dev libopenjp2-7 libtiff5
 sudo pip3 install bluepy
 sudo pip3 install --upgrade setuptools
 
@@ -20,7 +20,9 @@ cd ..
 cd ..
 rm -rf tmp
 
-echo ""
-echo "    Configure Startup"
-echo "sudo bash $PWD/run.sh" | sudo tee -a /etc/profile
-echo "Check if /etc/profil contains the previous line"
+sudo python3 -m pip3 install --force-reinstall adafruit-blinka
+sudo pip3 install --upgrade adafruit-python-shell
+sudo pip3 install Pillow
+sudo pip3 install adafruit-circuitpython-ssd1306
+
+

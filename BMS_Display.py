@@ -72,7 +72,7 @@ def scan(name):
                 
 
 
-screen = ScreenManager.ScreenManager("/home/pi/python/XiaoxiangBMSPiDisplay/Roboto-Regular.ttf", 20)
+screen = ScreenManager.ScreenManager("Roboto-Regular.ttf", 20)
 screen.DrawText("BMS Display \nSearching...")
 screen.AddGauge(0,0,50000,43200,"V")
 screen.AddGauge(1,0,char="P")
