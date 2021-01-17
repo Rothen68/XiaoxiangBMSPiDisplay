@@ -1,6 +1,9 @@
 #!/usr/bin/env python3.5
 #-*- coding: utf-8 -*-
 
+#python ble scanner library, install : https://elinux.org/RPi_Bluetooth_LE#Using_Bluetooth_LE_with_Python
+#github ble scanner : https://ianharvey.github.io/bluepy-doc/scanner.html
+
 import ScreenManager
 
 import time
@@ -69,7 +72,7 @@ def scan(name):
                 
 
 
-screen = ScreenManager.ScreenManager("Roboto-Regular.ttf", 20)
+screen = ScreenManager.ScreenManager("/home/pi/python/XiaoxiangBMSPiDisplay/Roboto-Regular.ttf", 20)
 screen.DrawText("BMS Display \nSearching...")
 screen.AddGauge(0,0,50000,43200,"V")
 screen.AddGauge(1,0,char="P")
